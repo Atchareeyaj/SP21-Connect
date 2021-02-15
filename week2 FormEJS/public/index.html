@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>21 Grams memory : your soul in the afterlife</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <!-- counting text character credit : https://stackoverflow.com/questions/5371089/count-characters-in-textarea -->
+        <script src="http://code.jquery.com/jquery-1.5.js"></script>
+        <script>
+          function countChar(val) {
+            var len = val.value.length;
+            var max = 210;
+            if (len >= max) {
+              val.value = val.value.substring(0, max);
+            } else {
+              $('#charNum').text(max - len);
+            }
+          };
+        </script>
+    </head>
+    <body>
+        <div class="question">
+            <h1>21 Grams Memory</h1>
+            <p>At the moment of death, your body will lose 21 grams in weight. 
+                <br>
+                It might be a soul departs to the afterlife. 
+                <br>
+            </p>
+            <h3>If the last 21 grams can encapsulated one memory into your soul, what will it be?</h3>
+        </div>
+        <form method="POST" action="/formdata">
+            <lable for="text">Enter Your Memory</lable>
+            <br><br>
+            <textarea class ="text" name="text" maxlength="210" rows="10" cols="50" placeholder="Start Typin..."autofocus onkeyup="countChar(this)"></textarea>
+            <br><br>
+                <span id="charNum">210</span>
+                <!-- <span id="maximum">/ 210</span> -->
+            <br><br>
+            <lable for="bd">Date of Birth</lable>
+            <input type="date" name="bd">
+            <br><br>
+            <lable for="col">Color of Your Soul : </lable>
+            <input type="color" name="col">
+            <br><br>
+            <input class="button" type="submit" name="submit" value="Submit">
+        </form>
+
+    </body>
+
+</html>
