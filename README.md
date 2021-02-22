@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # SP21-Connect
 week 1 : Hypertext Website : Snow Rain
 =======
@@ -6,5 +6,6 @@ week 1 : Hypertext Website : Snow Rain
 
 week 1 : Hypertext Website : Snow Rain
 
-weeek 2 : Form & EJS : 21 GRams
->>>>>>> c7244b9ac6d1590617d12922d3104d1921f1729e
+week 2 : Form & EJS : 21 Grams
+
+week 3 : Database (continued form last week)
