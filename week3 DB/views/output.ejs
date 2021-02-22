@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> 21 Grams memory : your soul in the afterlife</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Soul in The Afterlife</h1>
+        <br><br>
+        <div class="wrapper">
+            <% 
+            if(data.length > 0){
+                for(let i = 0; i < data.length; i++){
+            %> 
+                    <div class="answer">
+                        <h5 style="color: <%= data[i].col%>">DOB : <%= data[i].bd %></h5>
+                        <p class="memo"><%= data[i].text %></p>
+                    </div>
+            <%   }} %> 
+        </div>
+        <div id ="return"> <form action="/" ><input class="button" type ="submit" value="Return to Earth" ></form></div>
+       
+    </body>
+</html>
