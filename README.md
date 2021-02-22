@@ -1,8 +1,7 @@
 
-# SP21-Connect
-week 1 : Hypertext Website : Snow Rain
-=======
 # ITP Connect class - Spring 2021
+
+=======
 
 week 1 : Hypertext Website : Snow Rain
 
