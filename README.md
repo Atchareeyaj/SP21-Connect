@@ -1,7 +1,6 @@
 
 # ITP Connect class - Spring 2021
 
-=======
 
 week 1 : Hypertext Website : Snow Rain
 
