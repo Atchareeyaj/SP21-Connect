@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Collaborative Afterlife Tales</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+        <!-- counting text character credit : https://stackoverflow.com/questions/5371089/count-characters-in-textarea -->
+        <script src="http://code.jquery.com/jquery-1.5.js"></script>
+        <script>
+          function countChar(val) {
+            var len = val.value.length;
+            var max = 100;
+            if (len >= max) {
+              val.value = val.value.substring(0, max);
+            } else {
+              $('#charNum').text(max - len);
+            }
+          }
+          
+          var msg = null;
+          var submit = null;
+          var text = null;
+
+          window.addEventListener('load',function(){
+            msg = document.getElementById('msg');
+            submit = document.getElementById('submit');
+            submit.addEventListener('click',sendData);
+            text = document.getElementById('text');
+          });
+
+          function sendData(){
+            fetch('/success?text=' + text.value)
+            .then(response => response.json())
+            .then(data => addMsg(data));
+          }
+
+          function addMsg(newMessages){
+            msg.innerHTML = "";
+            for(let i = 0; i < newMessages.length; i++){
+              msg.innerHTML = msg.innerHTML + newMessages[i].text +"<br><br>"
+            }
+            console.log("newMessages");
+          }
+
+        </script>
+    </head>
+    <body>
+        <div class="question">
+            <h1>Collaborative Afterlife Tales</h1>
+            <p>What do you think the afterlife will be like ?
+            </p>
+            <h3>Let's collaboratively build it together</h3>
+        </div>
+        <form>
+            <lable for="text">Share your belief</lable>
+            <br><br>
+            <textarea class ="text" id="text" name="text" maxlength="100" rows="10" cols="50" placeholder="Start Typin..."autofocus onkeyup="countChar(this)" method="get" required></textarea>
+            <br><br>
+                <span id="charNum">100</span>
+                <!-- <span id="maximum">/ 210</span> -->
+            <br><br>
+            <input class="button" type="button" id="submit" name="submit"value="Submit">
+        </form>
+        <br>
+        <h3>Afterlife Tales</h3>
+        <div id = "msg">Enter your tales to read others</div>
+    
+      </body>
+
+</html>

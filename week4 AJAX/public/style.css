@@ -1,0 +1,86 @@
+html, body {
+    background : #000000;
+    margin: 30;
+    padding: 20;
+    text-align: center;
+    letter-spacing: 2px;
+    color : #ffffff;
+  font-family: "Times New Roman", Times, serif; 
+  }
+
+  h1{
+    letter-spacing: 3px;
+  }
+
+  h3{
+    font-size: 18px;
+    letter-spacing: 0px;
+  }
+
+  h5{
+    font-style: italic;
+    font-size: 18px;
+  }
+
+  .question{
+    margin:auto 15%;
+  }
+
+  textarea.text{
+    resize:none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px rgb(138, 133, 138);
+    min-height: 100px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    color: #666;
+  }
+
+  #charNum{
+    /* width: 70%; */
+    /* padding: auto 15px;  */
+    margin: auto 20px;
+    text-align: right;
+    /* float: right; */
+    /* padding: 0.1rem 0 0 0; */
+    /* position:fixed; */
+  }
+
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  .answer{
+    border-style: dotted;
+    box-shadow: 5px 5px rgb(138, 133, 138);
+    padding: 15px;
+    border-radius: 10px;
+    background-color:#fffefe;
+    
+  }
+
+  .memo{
+    padding: 15px; 
+  }
+
+  .button {
+    background-color: rgb(0, 0, 0);
+    color : #f0f0f0;
+    border: 2px solid currentColor;
+    border-radius: 0.25em;
+    cursor: pointer;
+    font-size: inherit;
+    line-height: 1.4em;
+    padding: 0.25em 1em;
+    max-width: 20ch;
+  }
+
+  #return{
+    padding: 20px;
+  }
+
+ 
